@@ -1,6 +1,6 @@
 import { View, Text, Alert, StyleSheet, TextInput, Pressable } from 'react-native';
 import React, { useState } from 'react';
-import Toast from 'react-native-root-toast';
+import Toast from 'react-native-toast-message';
 import * as WebBrowser from 'expo-web-browser';
 import { useApiKeyContext } from '../contexts/apiKeyContext';
 
@@ -18,7 +18,11 @@ const ApiKeyPage = () => {
   const saveApiKey = async () => {
     if (apiKeyInput.trim().length > 0) {
       setApiKey(apiKeyInput);
-      Toast.show('API key saved', { duration: Toast.durations.SHORT });
+      Toast.show({
+        type: 'success',           // or 'info', 'error'
+        text1: 'API key saved',
+        visibilityTime: 2000,      // duration in ms
+      });
     } else {
       Alert.alert('Error', 'Please enter a valid API key');
     }
@@ -28,7 +32,11 @@ const ApiKeyPage = () => {
   const removeApiKey = async () => {
     setApiKey('');
     setApiKeyInput('');
-    Toast.show('API key removed', { duration: Toast.durations.SHORT });
+    Toast.show({
+      type: 'success',           // or 'info', 'error'
+      text1: 'API key removed',
+      visibilityTime: 2000,      // duration in ms
+    });
   };
 
   // Function to handle button press

@@ -70,7 +70,7 @@ export const useApi = () => {
             };
 
             // Update messages state with the new AI message
-            setMessages((prevMessages) => [...prevMessages, aiMessage]);
+            setMessages((prevMessages: any) => [...prevMessages, aiMessage]);
 
         } catch (error) {
             // Handle any errors that occur during the completion request
@@ -83,7 +83,7 @@ export const useApi = () => {
             };
 
             // Update messages state with the new AI message
-            setMessages((prevMessages) => [...prevMessages, aiMessage]);
+            setMessages((prevMessages: any) => [...prevMessages, aiMessage]);
         }
     };
 
@@ -124,8 +124,10 @@ export const useApi = () => {
                 size: '1024x1024',
             });
 
-            // Return the URL of the generated image
-            const imageUrl = response.data[0]?.url || 'An error occurred';
+            const imageUrl =
+                Array.isArray(response.data) && response.data.length > 0 && response.data[0]?.url
+                    ? response.data[0].url
+                    : 'An error occurred';
 
             // Create a new AI message with the AI's response
             const aiMessage: Message = {
@@ -134,7 +136,7 @@ export const useApi = () => {
             };
 
             // Update messages state with the new AI message
-            setMessages((prevMessages) => [...prevMessages, aiMessage]);
+            setMessages((prevMessages: any) => [...prevMessages, aiMessage]);
 
         } catch (error) {
             // Handle any errors that occur during the image generation request
@@ -146,7 +148,7 @@ export const useApi = () => {
             };
 
             // Update messages state with the error AI message
-            setMessages((prevMessages) => [...prevMessages, aiMessage]);
+            setMessages((prevMessages: any) => [...prevMessages, aiMessage]);
         }
     };
 
