@@ -1,25 +1,26 @@
-# ChatGPT Assistant
+# ChatGPT Asistan
 
-ChatGPT Assistant is an application developed using Expo and TypeScript. It serves as a basic demonstration of utilizing OpenAI's models for text generation, image generation, and speech-to-text functionalities. Users can interact with these models through the application, which is compatible with **Android**, **iOS**, and **Web** platforms.
+ChatGPT Asistan, **Expo** ve **TypeScript** kullanılarak geliştirilmiş bir uygulamadır. Bu uygulama, OpenAI'nin modellerini kullanarak metin üretimi, görsel üretimi ve konuşmadan metne dönüştürme (speech-to-text) işlevlerini temel düzeyde gösteren bir örnektir. Uygulama **Android**, **iOS** ve **Web** platformlarıyla uyumludur.
 
-## Features
+## Özellikler
 
-- **Text Generation:** Generate text using OpenAI's GPT models by providing prompts.
-- **Image Generation:** Generate images based on textual descriptions using OpenAI's DALL-E model.
-- **Speech-to-Text:** Convert spoken words into text using OpenAI's speech recognition model.
+- **Metin Üretimi:** Kullanıcının verdiği komutlara göre OpenAI GPT modelleriyle metin üretimi yapılır.
+- **Görsel Üretimi:** Yazılı tanımlamalara göre OpenAI'nin DALL·E modeliyle görsel oluşturulur.
+- **Konuşmadan Metne:** OpenAI'nin ses tanıma modeliyle konuşmalar yazıya dönüştürülür.
 
-## Usage
+## Kullanım
 
-To use the application, follow these steps:
+Uygulamayı çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Clone the repository:
+1. Depoyu klonlayın:
+
 
 ```
-git clone https://github.com/falatekmen/ChatGPT-Assistant.git
+git clone https://github.com/SADIK1703/Assistant-GPT
 ```
 
 
-2. Install dependencies:
+2. Dependency' leri yükleyin:
 
 ```
 cd ChatGPT-Assistant
@@ -27,29 +28,8 @@ npm install
 ```
 
 
-3. Start the development server:
+3. Geliştirme sunucusunu başlatın:
 
 ```
 expo start
 ```
-
-
-4. Follow the instructions to run the application on your desired platform (Android, iOS, or web).
-
-## Demo Videos
-
-Check out the demonstration videos to see ChatGPT Assistant in action:
-
-![0519](https://github.com/falatekmen/ChatGPT-Assistant/assets/81239267/0f9716b3-2a42-4dba-b5dc-d65faa837487)
-
-![0519 (1)(1)](https://github.com/falatekmen/ChatGPT-Assistant/assets/81239267/5d1094a0-9367-4772-b520-a8841b0f412a)
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to the project, feel free to fork the repository and submit a pull request with your changes.
-
-Please note that the Whisper model for speech-to-text functionality may not work perfectly on web platforms. Contributions to improve this feature are especially appreciated.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
